@@ -3,10 +3,14 @@ import React, { useState, ChangeEvent } from 'react';
 import './style.css';
 
 const App = () => {
-    const [binaryValue, setBinaryValue] = useState(0);
+    const [binaryValue, setBinaryValue] = useState('');
 
     function handleNumberChange(event: ChangeEvent<HTMLInputElement>) {
-        const value = parseInt(event.target.value);
+        const regex = /^(\s*|[0-1]+)$/;
+        const value = event.target.value;
+        if (value.length > 8 || !regex.test(value)) {
+            return;
+        }
         setBinaryValue(value);
     }
 
@@ -16,7 +20,6 @@ const App = () => {
             <div className="input-container">
                 <input
                     type="text"
-                    min="0"
                     value={binaryValue}
                     onChange={handleNumberChange}
                 />

@@ -20,6 +20,7 @@
     width: 100%;
     height: 4.4rem;
     margin: 1.2rem auto;
+    color: var(--color-text-dark);
 }
 
 .converted-value-container {
