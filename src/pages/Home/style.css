@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 700px;
+}
+
+.container > h1 {
+    margin: 1.2rem auto;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.input-container input {
+    width: 100%;
+    height: 4.4rem;
+    margin: 1.2rem auto;
+}
+
+.converted-value-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.converted-value-container span {
+    font: 600 3.6rem Roboto;
+    margin: 1.2rem auto;
+}
