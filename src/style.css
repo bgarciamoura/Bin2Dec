@@ -1,0 +1,30 @@
+:root {
+    font-size: 60%;
+    /* CSS HEX */
+    --color-text-dark: #bdd5eaff;
+    --ghost-white: #f7f7ffff;
+    --celadon-blue: #2978a0ff;
+    --color-bg: #513b56ff;
+    --orange-red-crayola: #fe5f55ff;
+}
+
+* {
+    /* font-family: 'Archivo', sans-serif; */
+    /* font-family: 'Baloo Tamma 2', cursive; */
+    /* font-family: 'Roboto', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+body,
+input,
+button,
+textarea {
+    font: 500 1.6rem Archivo;
+    color: var(--color-text-dark);
+}
