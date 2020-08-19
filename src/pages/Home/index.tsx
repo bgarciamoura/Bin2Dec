@@ -23,39 +23,17 @@ const App = () => {
 	}
 
 	function convertToDec() {
-		const values = [
-			1,
-			2,
-			4,
-			8,
-			16,
-			32,
-			64,
-			128,
-			256,
-			512,
-			1024,
-			2048,
-			4096,
-			8192,
-			16384,
-			32768,
-		];
 		const binArray = binaryValue.split('').reverse();
 		const newDecimalValue = binArray.reduce(
 			(accumulator, currentValue, index, array) => {
 				if (array[index] == '1') {
-					accumulator += values[index];
+					accumulator += Math.pow(2, index);
 				}
 				return accumulator;
 			},
 			0,
 		);
 		setDecimalValue(String(newDecimalValue));
-		// binArray.forEach((item, indice) => {
-		// 	console.log(item, indice + 1);
-		// });
-		// console.log(binArray);
 	}
 
 	return (
